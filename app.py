@@ -41,19 +41,19 @@ def speak(voice_eng,text):
 def Greet(voice_eng):
     hr=datetime.datetime.now().hour
     if hr>=0 and hr<12:
-        speak(voice_eng,"Good Morning,from opticron")
+        speak(voice_eng,"Good Morning,from John")
         #print("Good Morning,from opticron")
         st.write("Good Morning,from opticron")
     elif hr>=12 and hr<=16:
-        speak(voice_eng,"Good Afternoon,from opticron")
+        speak(voice_eng,"Good Afternoon,from John")
         # print("Good Afternoon,from opticron")
         st.write("Good Afternoon,from opticron")
     elif hr>16 and hr<=20:
-        speak(voice_eng,"Good Evening,from opticron")
+        speak(voice_eng,"Good Evening,from John")
         # print("Good Evening,from opticron")
         st.write("Good Evening,from opticron")
     else:
-        speak(voice_eng,"Good Night,from opticron")
+        speak(voice_eng,"Good Night,from John")
         # print("Good Night,from opticron")
         st.write("Good Evening,from opticron")
 
@@ -77,22 +77,22 @@ def takeCommand(voice_eng):
 
 
 def main():
-    st.title("Opticron - Your Personal Voice Assistant")
-    st.write("just say 'Ok bye' or 'stop' to stop opticron")
+    st.title("John - Your Personal Voice Assistant")
+    st.write("just say 'Ok bye' or 'stop' to stop John")
     #col1, col2, col3 = st.columns(3)
     # col1, col2,col3 = st.columns(3)
 
     if st.button("Run Opticron"):
-        #print('Hey,I am opticron your personal Voice assistant')
-        st.write('Hey,I am opticron your personal Voice assistant')
+        #print('Hey,I am John your personal Voice assistant')
+        st.write('Hey,I am John your personal Voice assistant')
         voice_eng = start_engine()
-        speak(voice_eng,"Hey,I am opticron your personal Voice assistant")
+        speak(voice_eng,"Hey,I am John your personal Voice assistant")
         Greet(voice_eng)
         run_opticron(voice_eng)
 
 
-    # run_button = col1.button("Run Opticron", key="run_button")
-    # stop_button = col2.button("Stop Opticron", key="stop_button")
+    # run_button = col1.button("Run John", key="run_button")
+    # stop_button = col2.button("Stop John", key="stop_button")
     # if run_button:
     #     stop_opticron = False
     #     st.write('Hey,I am opticron your personal Voice assistant')
@@ -108,27 +108,27 @@ def main():
 # Define your Opticron code as a function
 def run_opticron(voice_eng):
         while not stop_opticron:
-            speak(voice_eng,"Tell me how can opticron help you?")
+            speak(voice_eng,"Tell me how can John help you?")
             user_request = takeCommand(voice_eng).lower()
             if user_request == 0:
                 continue
 
             if "good bye" in user_request or "ok bye" in user_request or "stop" in user_request:
                 speak(voice_eng,'Good Bye your personal assistant Opticron is shutting down')
-                # print('Good Bye your personal assistant Opticron is shutting down')
-                st.write('Good Bye your personal assistant Opticron is shutting down')
+                # print('Good Bye your personal assistant John is shutting down')
+                st.write('Good Bye your personal assistant John is shutting down')
                 break
 
             if "my name" in user_request:
                 speak(voice_eng,'thats a nice name')
                 # print('thats a nice name')
-                st.write('Good Bye your personal assistant Opticron is shutting down')
+                st.write('Good Bye your personal assistant John is shutting down')
                 time.sleep(5)
 
             if "your name" in user_request:
-                speak(voice_eng,'i am opticron your personal voice assistant,whats your name')
-                # print('i am opticron, your personal voice assistant,whats your name')
-                st.write('i am opticron, your personal voice assistant,whats your name')
+                speak(voice_eng,'i am John your personal voice assistant,whats your name')
+                # print('i am John, your personal voice assistant,whats your name')
+                st.write('i am John, your personal voice assistant,whats your name')
                 name_request = takeCommand(voice_eng)
                 speak(voice_eng,'thats a nice name')
                 # print('thats a nice name')
